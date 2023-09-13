@@ -26,6 +26,22 @@ Public Module Toa_Do
     Public z3 As Double
     Public z4 As Double
 
+    ' Móng phụ của móng chính 1
+    Public x1_phu As Double
+    Public y1_phu As Double
+    Public z1_phu As Double
+    'Móng phụ của móng chính 2
+    Public x2_phu As Double
+    Public y2_phu As Double
+    Public z2_phu As Double
+    'Móng phụ của móng chính 3 
+    Public x3_phu As Double
+    Public y3_phu As Double
+    Public z3_phu As Double
+    'Móng phụ của móng chính 4
+    Public x4_phu As Double
+    Public y4_phu As Double
+    Public z4_phu As Double
 End Module
 Module Extensions
     <Extension()>

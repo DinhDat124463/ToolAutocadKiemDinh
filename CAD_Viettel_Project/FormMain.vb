@@ -588,20 +588,29 @@ Public Class FormMain
             If ThongTinChung.LoaiCot = "Dây co" Then
                 If ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 3 And ThongTinChung.GaChongXoay = "" Then
                     ShowForm(frm33d_DD_KG)
+                    'Thêm
+                ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 6 And ThongTinChung.GaChongXoay = "" Then
+                    ShowForm(frm33d_DD_KG)
+                ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 6 And ThongTinChung.GaChongXoay <> "" Then
+                    ShowForm(frm33d_DD_CG)
                 ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 3 And ThongTinChung.GaChongXoay <> "" Then
                     ShowForm(frm33d_DD_CG)
+                    'Thêm
+                ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 6 And ThongTinChung.GaChongXoay <> "" Then
+                    ShowForm(frm33d_DD_CG)
+
                 ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay = "" Then
-                    ShowForm(frm34d_DD_KG)
-                ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay <> "" Then
-                    ShowForm(frm34d_DD_CG)
-                ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay = "" Then
-                    ShowForm(frm44d_DD_KG)
-                ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay <> "" Then
-                    ShowForm(frm44d_DD_CG)
-                ElseIf ThongTinChung.ViTriDat = "Trên mái" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay = "" Then
-                    ShowForm(frm44d_TM_KG)
-                ElseIf ThongTinChung.ViTriDat = "Trên mái" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay <> "" Then
-                    ShowForm(frm44d_TM_CG)
+                        ShowForm(frm34d_DD_KG)
+                    ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 3 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay <> "" Then
+                        ShowForm(frm34d_DD_CG)
+                    ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay = "" Then
+                        ShowForm(frm44d_DD_KG)
+                    ElseIf ThongTinChung.ViTriDat = "Dưới đất" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay <> "" Then
+                        ShowForm(frm44d_DD_CG)
+                    ElseIf ThongTinChung.ViTriDat = "Trên mái" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay = "" Then
+                        ShowForm(frm44d_TM_KG)
+                    ElseIf ThongTinChung.ViTriDat = "Trên mái" And ThongTinChung.SoChanCot = 4 And ThongTinChung.SoMong = 4 And ThongTinChung.GaChongXoay <> "" Then
+                        ShowForm(frm44d_TM_CG)
                 End If
             Else
                 ShowForm(frmMB_TuDung)

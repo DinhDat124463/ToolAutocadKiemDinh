@@ -40,6 +40,24 @@
     Public b_d As Double    ' mo neo
     Public b_a As Double ' canh cot
     Public Tile As Double 'Ti le scale net dut mat bang
+    ' Khai báo móng phụ
+    Public b_Mongphu1 As Double
+    Public b_bmongphu1 As Double
+    Public b_hmongphu1 As Double
+    Public b_zmongphu1 As Double
+    Public b_Mongphu2 As Double
+    Public b_bmongphu2 As Double
+    Public b_hmongphu2 As Double
+    Public b_zmongphu2 As Double
+    Public b_Mongphu3 As Double
+    Public b_bmongphu3 As Double
+    Public b_hmongphu3 As Double
+    Public b_zmongphu3 As Double
+
+    Public Kc_Mongphu1 As Double
+    Public Kc_Mongphu2 As Double
+    Public Kc_Mongphu3 As Double
+    '..............
     Public b_agachongxoay As Double
     Public b_bmove As Double
     Public b_hmove As Double

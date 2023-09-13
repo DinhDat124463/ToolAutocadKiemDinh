@@ -2523,3 +2523,307 @@ D:\1.DuAnViettel\ToolCad\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_V
 D:\1.DuAnViettel\ToolCad\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.dll
 D:\1.DuAnViettel\ToolCad\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.xml
 D:\1.DuAnViettel\ToolCad\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll.config
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Core.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.IO.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Net.Http.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Runtime.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDxPublishUi.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMNUParser.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\acdbmgd.resources.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AdWindows.resources.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDx.resources.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDxPublishUi.resources.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcMr.resources.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcWindows.resources.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormSetting.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotDayCo.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotTuDung.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_KG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_CG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_CG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_KG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_CG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMB_TuDung.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_L3d_KG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_CG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_KG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_KG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMain.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_CG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_KG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiCG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormPrint.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Formtest.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiKG.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_TuDung.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resources.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resource1.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.TestMatDung.resources
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.GenerateResource.Cache
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\Lam\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll.config
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Core.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.IO.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Net.Http.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Runtime.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDxPublishUi.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMNUParser.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\acdbmgd.resources.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AdWindows.resources.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDx.resources.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDxPublishUi.resources.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcMr.resources.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcWindows.resources.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormSetting.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotDayCo.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotTuDung.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_KG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_CG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_CG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_KG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_CG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMB_TuDung.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_L3d_KG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_CG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_KG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_KG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMain.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_CG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_KG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiCG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormPrint.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Formtest.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiKG.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_TuDung.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resources.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resource1.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.TestMatDung.resources
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.GenerateResource.Cache
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\1. Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll.config
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Core.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDxPublishUi.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMNUParser.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\acdbmgd.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AdWindows.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDx.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDxPublishUi.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcMr.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcWindows.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormSetting.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotDayCo.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotTuDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMB_TuDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_L3d_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMain.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiCG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormPrint.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Formtest.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiKG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_TuDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resources.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resource1.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.TestMatDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.GenerateResource.Cache
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll.config
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Core.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Sensors.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDxPublishUi.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMNUParser.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\accoremgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acdbmgdbrep.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\acmgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdWindows.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\System.Windows.Forms.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\WindowsFormsIntegration.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUiPalettes.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcDx.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcMr.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcWindows.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AdUIMgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcTcMgd.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\AcCui.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\acdbmgd.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AdWindows.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDx.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcDxPublishUi.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcMr.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\bin\Debug\en-US\AcWindows.resources.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormSetting.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotDayCo.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormTTCcotTuDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_3Mong_DD_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form3Chan_4Mong_DD_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMB_TuDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_L3d_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_DD_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Form4Chan_4Mong_TM_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMain.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_CG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_KG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiCG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormPrint.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Formtest.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_3Chan_4Mong_L3_trenmaiKG.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.FormMD_TuDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resources.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.Resource1.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.TestMatDung.resources
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.GenerateResource.Cache
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.dll
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.xml
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.pdb
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.AssemblyReference.cache
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.CoreCompileInputs.cache
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh - Copy\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.CopyComplete
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.AssemblyReference.cache
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.CoreCompileInputs.cache
+D:\Lamviec\1.Tool\ToolAutocadKiemDinh\ToolAutocadKiemDinh\CAD_Viettel_Project\obj\Debug\CAD_Viettel_Project.vbproj.CopyComplete

@@ -47,10 +47,10 @@ Partial Class Form3Chan_3Mong_DD_CG
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 15)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 18)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(455, 488)
+        Me.PictureBox1.Size = New System.Drawing.Size(607, 601)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -72,9 +72,9 @@ Partial Class Form3Chan_3Mong_DD_CG
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(460, 508)
+        Me.Panel1.Size = New System.Drawing.Size(613, 625)
         Me.Panel1.TabIndex = 5
         '
         'GroupBox1
@@ -84,10 +84,10 @@ Partial Class Form3Chan_3Mong_DD_CG
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(460, 508)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(613, 625)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Hình minh họa mặt bằng:"
@@ -111,22 +111,22 @@ Partial Class Form3Chan_3Mong_DD_CG
         Me.btnlai.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.btnlai.IdleForecolor = System.Drawing.Color.FromArgb(CType(CType(107, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(142, Byte), Integer))
         Me.btnlai.IdleLineColor = System.Drawing.Color.DimGray
-        Me.btnlai.Location = New System.Drawing.Point(245, 452)
-        Me.btnlai.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnlai.Location = New System.Drawing.Point(327, 556)
+        Me.btnlai.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.btnlai.Name = "btnlai"
-        Me.btnlai.Size = New System.Drawing.Size(201, 42)
+        Me.btnlai.Size = New System.Drawing.Size(268, 52)
         Me.btnlai.TabIndex = 49
         Me.btnlai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Form3Chan_3Mong_L2_KG
+        'Form3Chan_3Mong_DD_CG
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(460, 508)
+        Me.ClientSize = New System.Drawing.Size(613, 625)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "Form3Chan_3Mong_L2_KG"
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Name = "Form3Chan_3Mong_DD_CG"
         Me.Text = "Form3Chan_3Mong_L2_KG"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)

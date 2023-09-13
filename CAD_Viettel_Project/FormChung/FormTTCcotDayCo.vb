@@ -98,13 +98,13 @@ Public Class FormTTCcotDayCo
             Me.lbMongNoiChungCot.Visible = False
         End If
     End Sub
-
-
+    Public Shared Row_Mongphu As Double
     Private Sub btnlai_Click(sender As Object, e As EventArgs) Handles btnlai.Click
         TiLeChu = txttile.Text
         TiLeChu_MD = clsMatDung.mbTileMD()
         ChieuCaoChu = txtCoChu.Text
         Try
+            Row_Mongphu = dgvToaDoMong.RowCount
             If BangTTC.Rows(2).Cells(1).Value = "Dây co" Then
                 ThongTinChung.DiaDiem = BangTTC.Rows(0).Cells(1).Value
                 ThongTinChung.MaTram = BangTTC.Rows(1).Cells(1).Value
@@ -174,17 +174,30 @@ Public Class FormTTCcotDayCo
                 b_hMong3 = Convert.ToDouble(txthM3.Text)
                 b_zMong3 = Convert.ToDouble(txtzM3.Text)
 
+                b_bmongphu1 = b_bMong1
+                b_hmongphu1 = b_hMong1
+                b_zmongphu1 = b_zMong1
+
+                b_bmongphu2 = b_bMong2
+                b_hmongphu2 = b_hMong2
+                b_zmongphu2 = b_zMong2
+
+                b_bmongphu3 = b_bMong3
+                b_hmongphu3 = b_hMong3
+                b_zmongphu3 = b_zMong3
+
+
                 If b_b0mong = 0 Or b_h0mong = 0 Or b_z0mong = 0 Or b_bmong = 0 Or b_hmong = 0 Or b_zmong = 0 Or b_bMong1 = 0 _
                      Or b_hMong1 = 0 Or b_zMong1 = 0 Or b_bMong2 = 0 Or b_hMong2 = 0 Or b_zMong2 = 0 _
                      Or b_bMong3 = 0 Or b_hMong3 = 0 Or b_zMong3 = 0 Then
                     MsgBox("Kích thước móng chưa chính xác!")
                     Exit Sub
                 End If
-                'If ThongTinChung.SoMong = 4 Then
-                '    b_bMong4 = Convert.ToDouble(txtbM4.Text)
-                '    b_hMong4 = Convert.ToDouble(txthM4.Text)
-                '    b_zMong4 = Convert.ToDouble(txtzM4.Text)
-                'End If
+                If ThongTinChung.SoMong = 4 Then
+                    b_bMong4 = Convert.ToDouble(txtbM4.Text)
+                    b_hMong4 = Convert.ToDouble(txthM4.Text)
+                    b_zMong4 = Convert.ToDouble(txtzM4.Text)
+                End If
                 If txtGocXoay.Text = Nothing Then
                 Else
                     GocXoayMatBang = -(Convert.ToDouble(txtGocXoay.Text))
@@ -219,9 +232,13 @@ Public Class FormTTCcotDayCo
                 b_Mong1 = cmbLoaiMong1.SelectedIndex
                 b_Mong2 = cmbLoaiMong2.SelectedIndex
                 b_Mong3 = cmbLoaiMong3.SelectedIndex
-                'If ThongTinChung.SoMong = 4 Then
-                '    b_Mong4 = cmbLoaiMong4.SelectedIndex
-                'End If
+                'Vẽ móng phụ
+                b_Mongphu1 = cmbLoaiMong1.SelectedIndex
+                b_Mongphu2 = cmbLoaiMong2.SelectedIndex
+                b_Mongphu3 = cmbLoaiMong3.SelectedIndex
+                If ThongTinChung.SoMong = 4 Then
+                    b_Mong4 = cmbLoaiMong4.SelectedIndex
+                End If
                 Dim text As String() = ThongTinChung.TietDienCot.Replace("×", "x").Split("x")
                 'txtzM0.Text = text(2)
                 ' txtzM.Text = text(2)
@@ -262,7 +279,32 @@ Public Class FormTTCcotDayCo
                     x4 = (Convert.ToDouble(dgvToaDoMong.Rows(3).Cells(1).Value)) * 1000
                     y4 = (Convert.ToDouble(dgvToaDoMong.Rows(3).Cells(2).Value)) * 1000
                     z4 = (Convert.ToDouble(dgvToaDoMong.Rows(3).Cells(3).Value)) * 1000
+                ElseIf dgvToaDoMong.RowCount = 6 Then
+                    x1 = (Convert.ToDouble(dgvToaDoMong.Rows(0).Cells(1).Value)) * 1000
+                    y1 = (Convert.ToDouble(dgvToaDoMong.Rows(0).Cells(2).Value)) * 1000
+                    z1 = (Convert.ToDouble(dgvToaDoMong.Rows(0).Cells(3).Value)) * 1000
+
+                    x2 = (Convert.ToDouble(dgvToaDoMong.Rows(1).Cells(1).Value)) * 1000
+                    y2 = (Convert.ToDouble(dgvToaDoMong.Rows(1).Cells(2).Value)) * 1000
+                    z2 = (Convert.ToDouble(dgvToaDoMong.Rows(1).Cells(3).Value)) * 1000
+
+                    x3 = (Convert.ToDouble(dgvToaDoMong.Rows(2).Cells(1).Value)) * 1000
+                    y3 = (Convert.ToDouble(dgvToaDoMong.Rows(2).Cells(2).Value)) * 1000
+                    z3 = (Convert.ToDouble(dgvToaDoMong.Rows(2).Cells(3).Value)) * 1000
+
+                    x1_phu = (Convert.ToDouble(dgvToaDoMong.Rows(3).Cells(1).Value)) * 1000
+                    y1_phu = (Convert.ToDouble(dgvToaDoMong.Rows(3).Cells(2).Value)) * 1000
+                    z1_phu = (Convert.ToDouble(dgvToaDoMong.Rows(3).Cells(3).Value)) * 1000
+
+                    x2_phu = (Convert.ToDouble(dgvToaDoMong.Rows(4).Cells(1).Value)) * 1000
+                    y2_phu = (Convert.ToDouble(dgvToaDoMong.Rows(4).Cells(2).Value)) * 1000
+                    z2_phu = (Convert.ToDouble(dgvToaDoMong.Rows(4).Cells(3).Value)) * 1000
+
+                    x3_phu = (Convert.ToDouble(dgvToaDoMong.Rows(5).Cells(1).Value)) * 1000
+                    y3_phu = (Convert.ToDouble(dgvToaDoMong.Rows(5).Cells(2).Value)) * 1000
+                    z3_phu = (Convert.ToDouble(dgvToaDoMong.Rows(5).Cells(3).Value)) * 1000
                 End If
+
             Else
                 ThongTinChung.DiaDiem = BangTTC.Rows(0).Cells(1).Value
                 ThongTinChung.MaTram = BangTTC.Rows(1).Cells(1).Value
@@ -375,6 +417,380 @@ Public Class FormTTCcotDayCo
             MsgBox("Tính tọa độ móng không thành công!")
         End Try
 
+    End Sub
+
+    Public Sub TinhLaiToaDo_CoThemMongPhu(dgvToaDoMong As DataGridView, dgvCanhCanhCanh As DataGridView)
+        ' Kiểm tra xem các cột, các hàng trong dgvToaDoMong có bị rỗng hay không
+        For Each row As DataGridViewRow In dgvToaDoMong.Rows
+            For i = 1 To 3
+                If row.Cells(i).Value Is Nothing OrElse String.IsNullOrEmpty(row.Cells(i).Value.ToString()) OrElse Not IsNumeric(row.Cells(i).Value) Then
+                    Exit Sub
+                    MsgBox("Khoảng cách các móng không hợp lý!")
+
+                End If
+            Next
+        Next
+        ' Khai báo Góc xoay mặt bằng 
+        Dim GocDo As Double = -Convert.ToDouble(frmTTC.txtGocXoay.Text)
+        ' Chuyển Góc xoay đó về dạng PI
+        Dim GocRad As Double = (GocDo * Math.PI) / 180
+        'Dim KcToiMongChinh As Double = Convert.ToDouble(txt_khoangcachmongtoimongchinh.Text)
+        Kc_Mongphu1 = 0
+        Kc_Mongphu2 = 0
+        Kc_Mongphu3 = 0
+        Try
+            If ThongTinChung.SoMong = 3 Then
+                'Lấy lại cao độ móng cũ
+                Dim z1 = dgvToaDoMong.Rows(0).Cells(3).Value
+                Dim z2 = dgvToaDoMong.Rows(1).Cells(3).Value
+                Dim z3 = dgvToaDoMong.Rows(2).Cells(3).Value
+                'End
+                Dim canhtruc1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(1).Value)
+                Dim canhtruc2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(1).Value)
+                Dim canhtruc3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(1).Value)
+                Dim canh1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(2).Value)
+                Dim canh2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(2).Value)
+
+                Dim goc1 As Double = TinhGoc(canhtruc1, canhtruc2, canh1)
+                Dim goc2 As Double = TinhGoc(canhtruc3, canhtruc2, canh2)
+                Dim Diem1 As Double() = {canhtruc1, 0}
+                Dim Diem2 As Double() = {canhtruc2, 0}
+                Diem2 = Xoay(Diem2, -goc1)
+                Dim Diem3 As Double() = {canhtruc3, 0}
+                Diem3 = Xoay(Diem3, -goc2 - goc1)
+
+                'Xoay Các điểm thêm 1 như hiện trường:
+                Diem1 = Xoay(Diem1, GocRad)
+                Diem2 = Xoay(Diem2, GocRad)
+                Diem3 = Xoay(Diem3, GocRad)
+
+                'End
+                dgvToaDoMong.RowCount = 0
+                dgvToaDoMong.Rows.Add({"Móng M1", Math.Round(Diem1(0), 3), Math.Round(Diem1(1), 3), z1, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M2", Math.Round(Diem2(0), 3), Math.Round(Diem2(1), 3), z2, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M3", Math.Round(Diem3(0), 3), Math.Round(Diem3(1), 3), z3, "Sửa"})
+            ElseIf ThongTinChung.SoMong = 6 Then
+                Dim z1 = dgvToaDoMong.Rows(0).Cells(3).Value
+                Dim z2 = dgvToaDoMong.Rows(1).Cells(3).Value
+                Dim z3 = dgvToaDoMong.Rows(2).Cells(3).Value
+                Dim z4 = dgvToaDoMong.Rows(3).Cells(3).Value
+                Dim z5 = dgvToaDoMong.Rows(3).Cells(3).Value
+                Dim z6 = dgvToaDoMong.Rows(3).Cells(3).Value
+                Dim canhtruc1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(1).Value)
+                Dim canhtruc2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(1).Value)
+                Dim canhtruc3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(1).Value)
+                Dim canhtruc4 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(3).Cells(1).Value)
+                Dim canhtruc5 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(4).Cells(1).Value)
+                Dim canhtruc6 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(5).Cells(1).Value)
+
+                Dim canh1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(2).Value)
+                Dim canh2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(2).Value)
+                Dim canh3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(2).Value)
+                Dim canh4 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(3).Cells(2).Value)
+                Dim canh5 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(4).Cells(2).Value)
+                Dim canh6 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(5).Cells(2).Value)
+
+                Dim goc1 As Double = TinhGoc(canhtruc1, canhtruc2, canh1)
+                Dim goc2 As Double = TinhGoc(canhtruc3, canhtruc2, canh2)
+                Dim goc3 As Double = TinhGoc(canhtruc4, canhtruc5, canh4)
+                Dim goc4 As Double = TinhGoc(canhtruc5, canhtruc6, canh5)
+                Dim goc5 As Double = TinhGoc(canhtruc1, canhtruc4, 9.7)
+                If Kc_Mongphu1 <> 0 And Kc_Mongphu2 <> 0 And Kc_Mongphu3 <> 0 Then
+                    Dim Diem1 As Double() = {canhtruc1, 0}
+                    Dim Diem2 As Double() = {canhtruc2, 0}
+                    Diem2 = Xoay(Diem2, goc1)
+                    Dim Diem3 As Double() = {canhtruc3, 0}
+                    Diem3 = Xoay(Diem3, goc2 + goc1)
+                    Dim Diem4 As Double() = {canhtruc1 - Kc_Mongphu1, 0}
+                    Dim Diem5 As Double() = {canhtruc2 - Kc_Mongphu2, 0}
+                    Diem5 = Xoay(Diem5, goc1)
+                    Dim Diem6 As Double() = {canhtruc3 - Kc_Mongphu3, 0}
+                    Diem6 = Xoay(Diem6, goc2 + goc1)
+                    'Xoay Các điểm thêm 1 như hiện trường:
+                    Diem1 = Xoay(Diem1, GocRad)
+                    Diem2 = Xoay(Diem2, GocRad)
+                    Diem3 = Xoay(Diem3, GocRad)
+                    Diem4 = Xoay(Diem4, GocRad)
+                    Diem5 = Xoay(Diem5, GocRad)
+                    Diem6 = Xoay(Diem6, GocRad)
+                    'End
+                    dgvToaDoMong.RowCount = 0
+                    dgvToaDoMong.Rows.Add({"Móng M1", Math.Round(Diem1(0), 3), Math.Round(Diem1(1), 3), z1, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M2", Math.Round(Diem2(0), 3), Math.Round(Diem2(1), 3), z2, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M3", Math.Round(Diem3(0), 3), Math.Round(Diem3(1), 3), z3, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M4", Math.Round(Diem4(0), 3), Math.Round(Diem4(1), 3), z1, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M5", Math.Round(Diem5(0), 3), Math.Round(Diem5(1), 3), z2, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M6", Math.Round(Diem6(0), 3), Math.Round(Diem6(1), 3), z3, "Sửa"})
+                Else
+                    Dim Diem1 As Double() = {canhtruc1, 0}
+                    Dim Diem2 As Double() = {canhtruc2, 0}
+                    Diem2 = Xoay(Diem2, goc1)
+                    Dim Diem3 As Double() = {canhtruc3, 0}
+                    Diem3 = Xoay(Diem3, goc2 + goc1)
+                    Dim Diem4 As Double() = {canhtruc4, 0}
+                    Diem4 = Xoay(Diem4, goc5)
+                    Dim Diem5 As Double() = {canhtruc5, 0}
+                    Diem5 = Xoay(Diem5, goc3 + goc4 + goc5)
+                    Dim Diem6 As Double() = {canhtruc6, 0}
+                    Diem6 = Xoay(Diem6, goc3 + goc5)
+
+                    'Xoay Các điểm thêm 1 như hiện trường:
+                    Diem1 = Xoay(Diem1, GocRad)
+                    Diem2 = Xoay(Diem2, GocRad)
+                    Diem3 = Xoay(Diem3, GocRad)
+                    Diem4 = Xoay(Diem4, GocRad)
+                    Diem5 = Xoay(Diem5, GocRad)
+                    Diem6 = Xoay(Diem6, GocRad)
+                    'End
+                    dgvToaDoMong.RowCount = 0
+                    dgvToaDoMong.Rows.Add({"Móng M1", Math.Round(Diem1(0), 3), Math.Round(Diem1(1), 3), z1, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M2", Math.Round(Diem2(0), 3), Math.Round(Diem2(1), 3), z2, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M3", Math.Round(Diem3(0), 3), Math.Round(Diem3(1), 3), z3, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M4", Math.Round(Diem4(0), 3), Math.Round(Diem4(1), 3), z1, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M5", Math.Round(Diem5(0), 3), Math.Round(Diem5(1), 3), z2, "Sửa"})
+                    dgvToaDoMong.Rows.Add({"Móng M6", Math.Round(Diem6(0), 3), Math.Round(Diem6(1), 3), z3, "Sửa"})
+                End If
+
+            ElseIf ThongTinChung.SoMong = 4 Then
+                    'Lấy lại cao độ móng cũ
+                    Dim z1 = dgvToaDoMong.Rows(0).Cells(3).Value
+                Dim z2 = dgvToaDoMong.Rows(1).Cells(3).Value
+                Dim z3 = dgvToaDoMong.Rows(2).Cells(3).Value
+                Dim z4 = dgvToaDoMong.Rows(3).Cells(3).Value
+                'end
+                Dim canhtruc1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(1).Value)
+                Dim canhtruc2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(1).Value)
+                Dim canhtruc3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(1).Value)
+                Dim canhtruc4 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(3).Cells(1).Value)
+
+                Dim canh1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(2).Value)
+                Dim canh2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(2).Value)
+                Dim canh3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(2).Value)
+                Dim canh4 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(3).Cells(2).Value)
+
+                Dim goc1 As Double = TinhGoc(canhtruc1, canhtruc2, canh1)
+                Dim goc2 As Double = TinhGoc(canhtruc2, canhtruc3, canh2)
+                Dim goc3 As Double = TinhGoc(canhtruc3, canhtruc4, canh3)
+
+                Dim Diem1 As Double()
+                Dim Diem2 As Double()
+                Dim Diem3 As Double()
+                Dim Diem4 As Double()
+                If Math.Abs(canh1 - canh2) < 0.3 Or Math.Abs(canh1 - canh3) < 0.3 Or Math.Abs(canh1 - canh4) < 0.3 Then
+                    Diem1 = {canh2 / 2, canh1 / 2}
+                    Diem2 = {canh2 / 2, -canh1 / 2}
+                    Diem3 = {-canh2 / 2, -canh1 / 2}
+                    Diem4 = {-canh2 / 2, canh1 / 2}
+                    Diem1 = Xoay(Diem1, (0 * Math.PI) / 180)
+                    Diem2 = Xoay(Diem2, (0 * Math.PI) / 180)
+                    Diem3 = Xoay(Diem3, (0 * Math.PI) / 180)
+                    Diem4 = Xoay(Diem4, (0 * Math.PI) / 180)
+                    Dim canhvuong1 As Double = 0
+                    Dim doLechTamX As Double = 0
+                    Dim canhvuong2 As Double = 0
+                    Dim doLechTamY As Double = 0
+                    If Math.Abs(canhtruc1 - canhtruc2) < 0.3 Then
+                        ' Tính độ lệch tâm theo phương X
+                        If Math.Abs(canhtruc1 - canhtruc3) > 0.3 Then
+                            canhvuong1 = Math.Sqrt(canhtruc1 ^ 2 - (canh1 / 2) ^ 2)
+                            doLechTamX = canh2 / 2 - canhvuong1
+                        End If
+                        ' Tính độ lệch tâm theo phương Y
+                        If Math.Abs(canhtruc1 - canhtruc2) > 0.3 Then
+                            canhvuong2 = Math.Sqrt(canhtruc3 ^ 2 - (canh2 / 2) ^ 2)
+                            doLechTamY = canh1 / 2 - canhvuong2
+                        End If
+
+                    ElseIf Math.Abs(canhtruc1 - canhtruc4) < 0.3 Then
+                        ' Tính độ lệch tâm theo phương Y
+                        If Math.Abs(canhtruc1 - canhtruc3) > 0.3 Then
+                            canhvuong1 = Math.Sqrt(canhtruc1 ^ 2 - (canh2 / 2) ^ 2)
+                            doLechTamY = canh1 / 2 - canhvuong1
+
+                        End If
+                        ' Tính độ lệch tâm theo phương X                        
+                        If Math.Abs(canhtruc1 - canhtruc4) > 0.3 Then
+                            canhvuong2 = Math.Sqrt(canhtruc1 ^ 2 - (canh1 / 2) ^ 2)
+                            doLechTamX = canh1 / 2 - canhvuong2
+                        End If
+                    Else
+                        If Math.Abs(canhtruc1 - canhtruc3) > 0.3 Then
+                            canhvuong1 = Math.Sqrt(canhtruc1 ^ 2 - (canh1 / 2) ^ 2)
+                            doLechTamX = canh2 / 2 - canhvuong1
+                        End If
+                        ' Tính độ lệch tâm theo phương Y
+
+                        If Math.Abs(canhtruc1 - canhtruc2) > 0.3 Then
+                            canhvuong2 = Math.Sqrt(canhtruc3 ^ 2 - (canh2 / 2) ^ 2)
+                            doLechTamY = canh1 / 2 - canhvuong2
+                        End If
+                    End If
+
+                    Diem1 = {Diem1(0) - doLechTamX, Diem1(1) - doLechTamY}
+                    Diem2 = {Diem2(0) - doLechTamX, Diem2(1) - doLechTamY}
+                    Diem3 = {Diem3(0) - doLechTamX, Diem3(1) - doLechTamY}
+                    Diem4 = {Diem4(0) - doLechTamX, Diem4(1) - doLechTamY}
+
+                Else
+                    Diem1 = Xoay({canhtruc1, 0}, goc1 / 2)
+
+                    Diem2 = {Diem1(0), Diem1(1) - canh1}
+
+                    Diem3 = Xoay(Diem2, -goc2)
+
+                    Diem4 = {Diem3(0), Diem3(1) + canh3}
+
+                    Diem1 = Xoay(Diem1, (0 * Math.PI) / 180)
+                    Diem2 = Xoay(Diem2, (0 * Math.PI) / 180)
+                    Diem3 = Xoay(Diem3, (0 * Math.PI) / 180)
+                    Diem4 = Xoay(Diem4, (0 * Math.PI) / 180)
+
+                End If
+
+                'Xoay Các điểm thêm 1 như hiện trường:
+                Diem1 = Xoay(Diem1, -GocRad)
+                Diem2 = Xoay(Diem2, -GocRad)
+                Diem3 = Xoay(Diem3, -GocRad)
+                Diem4 = Xoay(Diem4, -GocRad)
+                'end
+                'Xoay Các điểm thêm 1 như hiện trường:
+                Diem1 = Xoay(Diem1, -Math.PI)
+                Diem2 = Xoay(Diem2, -Math.PI)
+                Diem3 = Xoay(Diem3, -Math.PI)
+                Diem4 = Xoay(Diem4, -Math.PI)
+                'end
+                dgvToaDoMong.RowCount = 0
+                dgvToaDoMong.Rows.Add({"Móng M1", Math.Round(Diem1(0), 3), Math.Round(Diem1(1), 3), z1, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M2", Math.Round(Diem2(0), 3), Math.Round(Diem2(1), 3), z2, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M3", Math.Round(Diem3(0), 3), Math.Round(Diem3(1), 3), z3, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M4", Math.Round(Diem4(0), 3), Math.Round(Diem4(1), 3), z4, "Sửa"})
+            End If
+        Catch ex As Exception
+            MsgBox("Tính tọa độ móng không thành công!")
+        End Try
+    End Sub
+    Public Sub TinhLaiToaDoMstower_Comongphu(dgvToaDoMong As DataGridView, dgvCanhCanhCanh As DataGridView)
+        For Each row As DataGridViewRow In dgvToaDoMong.Rows
+            For i = 1 To 3
+
+                If row.Cells(i).Value Is Nothing OrElse String.IsNullOrEmpty(row.Cells(i).Value.ToString()) OrElse Not IsNumeric(row.Cells(i).Value) Then
+                    Exit Sub
+                    MsgBox("Khoảng cách các móng không hợp lý!")
+
+                End If
+            Next
+
+        Next
+        Kc_Mongphu1 = 0
+        Kc_Mongphu2 = 0
+        Kc_Mongphu3 = 0
+        Try
+            If ThongTinChung.SoMong = 3 Then
+                'Lấy lại cao độ móng cũ
+                Dim z1 = dgvToaDoMong.Rows(0).Cells(3).Value
+                Dim z2 = dgvToaDoMong.Rows(1).Cells(3).Value
+                Dim z3 = dgvToaDoMong.Rows(2).Cells(3).Value
+                'End
+                Dim canhtruc1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(1).Value)
+                Dim canhtruc2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(1).Value)
+                Dim canhtruc3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(1).Value)
+
+                Dim canh1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(2).Value)
+                Dim canh2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(2).Value)
+
+                Dim goc1 As Double = TinhGoc(canhtruc1, canhtruc2, canh1)
+                Dim goc2 As Double = TinhGoc(canhtruc3, canhtruc2, canh2)
+                'If coGa Then canhtruc1 = -canhtruc1
+                Dim Diem1 As Double() = {-canhtruc1, 0}
+                Dim Diem2 As Double() = {-canhtruc2, 0}
+                Diem2 = Xoay(Diem2, -goc1)
+                ' Móng chính 3
+                Dim Diem3 As Double() = {-canhtruc3, 0}
+                Diem3 = Xoay(Diem3, -goc2 - goc1)
+                dgvToaDoMong.RowCount = 0
+                dgvToaDoMong.Rows.Add({"Móng M1", Math.Round(Diem1(0), 3), Math.Round(Diem1(1), 3), z1, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M2", Math.Round(Diem2(0), 3), Math.Round(Diem2(1), 3), z2, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M3", Math.Round(Diem3(0), 3), Math.Round(Diem3(1), 3), z3, "Sửa"})
+
+            ElseIf ThongTinChung.SoMong = 6 Then
+                'Lấy lại cao độ móng cũ
+                Dim z1 = dgvToaDoMong.Rows(0).Cells(3).Value
+                Dim z2 = dgvToaDoMong.Rows(1).Cells(3).Value
+                Dim z3 = dgvToaDoMong.Rows(2).Cells(3).Value
+                'End
+                Dim canhtruc1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(1).Value)
+                Dim canhtruc2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(1).Value)
+                Dim canhtruc3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(1).Value)
+
+                Dim canh1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(2).Value)
+                Dim canh2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(2).Value)
+
+                Dim goc1 As Double = TinhGoc(canhtruc1, canhtruc2, canh1)
+                Dim goc2 As Double = TinhGoc(canhtruc3, canhtruc2, canh2)
+
+                Dim Diem1 As Double() = {-canhtruc1, 0}
+                Dim Diem2 As Double() = {-canhtruc2, 0}
+                Diem2 = Xoay(Diem2, -goc1)
+                Dim Diem3 As Double() = {-canhtruc3, 0}
+                Diem3 = Xoay(Diem3, -goc2 - goc1)
+                Dim Diem4 As Double() = {(-canhtruc1) - Kc_Mongphu1, 0}
+                Dim Diem5 As Double() = {-canhtruc2 - Kc_Mongphu2, 0}
+                Diem5 = Xoay(Diem5, -goc1)
+                Dim Diem6 As Double() = {-canhtruc3 - Kc_Mongphu3, 0}
+                Diem6 = Xoay(Diem6, -goc2 - goc1)
+
+                dgvToaDoMong.RowCount = 0
+                dgvToaDoMong.Rows.Add({"Móng M1", Math.Round(Diem1(0), 3), Math.Round(Diem1(1), 3), z1, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M2", Math.Round(Diem2(0), 3), Math.Round(Diem2(1), 3), z2, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M3", Math.Round(Diem3(0), 3), Math.Round(Diem3(1), 3), z3, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M4", Math.Round(Diem4(0), 3), Math.Round(Diem4(1), 3), z1, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M5", Math.Round(Diem5(0), 3), Math.Round(Diem5(1), 3), z2, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M6", Math.Round(Diem6(0), 3), Math.Round(Diem6(1), 3), z3, "Sửa"})
+
+            ElseIf ThongTinChung.SoMong = 4 Then
+                'Lấy lại cao độ móng cũ
+                Dim z1 = dgvToaDoMong.Rows(0).Cells(3).Value
+                Dim z2 = dgvToaDoMong.Rows(1).Cells(3).Value
+                Dim z3 = dgvToaDoMong.Rows(2).Cells(3).Value
+                Dim z4 = dgvToaDoMong.Rows(3).Cells(3).Value
+                'End
+                Dim canhtruc1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(1).Value)
+                Dim canhtruc2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(1).Value)
+                Dim canhtruc3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(1).Value)
+                Dim canhtruc4 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(3).Cells(1).Value)
+
+                Dim canh1 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(0).Cells(2).Value)
+                Dim canh2 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(1).Cells(2).Value)
+                Dim canh3 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(2).Cells(2).Value)
+                Dim canh4 As Double = Convert.ToDouble(dgvCanhCanhCanh.Rows(3).Cells(2).Value)
+
+                Dim goc1 As Double = TinhGoc(canhtruc1, canhtruc2, canh1)
+                Dim goc2 As Double = TinhGoc(canhtruc2, canhtruc3, canh2)
+                Dim goc3 As Double = TinhGoc(canhtruc3, canhtruc4, canh3)
+
+                Dim Diem1 As Double() = Xoay({canhtruc1, 0}, goc1 / 2)
+                Diem1 = Xoay(Diem1, (180 * Math.PI) / 180)
+                Dim Diem2 As Double() = {-canhtruc2, 0}
+                Diem2 = Xoay(Diem2, goc1 / 2)
+                Diem2 = Xoay(Diem2, -goc1)
+                Dim Diem3 As Double() = {-canhtruc3, 0}
+                Diem3 = Xoay(Diem3, goc1 / 2)
+
+                Diem3 = Xoay(Diem3, -goc2 - goc1)
+                Dim Diem4 As Double() = {-canhtruc4, 0}
+                Diem4 = Xoay(Diem4, goc1 / 2)
+
+                Diem4 = Xoay(Diem4, -goc3 - goc2 - goc1)
+
+                dgvToaDoMong.RowCount = 0
+                dgvToaDoMong.Rows.Add({"Móng M1", Math.Round(Diem1(0), 3), Math.Round(Diem1(1), 3), z1, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M2", Math.Round(Diem2(0), 3), Math.Round(Diem2(1), 3), z2, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M3", Math.Round(Diem3(0), 3), Math.Round(Diem3(1), 3), z3, "Sửa"})
+                dgvToaDoMong.Rows.Add({"Móng M4", Math.Round(Diem4(0), 3), Math.Round(Diem4(1), 3), z4, "Sửa"})
+            End If
+        Catch ex As Exception
+            MsgBox("Tính tọa độ móng không thành công!")
+        End Try
     End Sub
     Public Sub TinhLaiToaDoHienTrang(dgvToaDoMong As DataGridView, dgvCanhCanhCanh As DataGridView)
 
@@ -769,8 +1185,10 @@ Public Class FormTTCcotDayCo
     End Sub
 
     Private Sub btnTinhLaiToaDo_Click(sender As Object, e As EventArgs) Handles btnTinhLaiToaDo.Click
-        TinhLaiToaDoHienTrang(dgvToaDoMong, dgvCanhCanhCanh)
-        TinhLaiToaDoMstower(dgvToaDoMongMstower, dgvCanhCanhCanh)
+        TinhLaiToaDo_CoThemMongPhu(dgvToaDoMong, dgvCanhCanhCanh)
+        TinhLaiToaDoMstower_Comongphu(dgvToaDoMongMstower, dgvCanhCanhCanh)
+        'TinhLaiToaDoHienTrang(dgvToaDoMong, dgvCanhCanhCanh)
+        'TinhLaiToaDoMstower(dgvToaDoMongMstower, dgvCanhCanhCanh)
         frmTTC.txttile.Text = Math.Round(mbVeMong.mbTile(), 3)
         frmTTC.txtCoChu.Text = ChieuCaoChu
         TiLeChu_MD = clsMatDung.mbTileMD()
@@ -864,5 +1282,9 @@ Public Class FormTTCcotDayCo
             PictureBox1.Image = My.Resources.TH6
 
         End If
+    End Sub
+
+    Private Sub btnTinhLaiToaDoGoc_Click(sender As Object, e As EventArgs) Handles btnTinhLaiToaDoGoc.Click
+
     End Sub
 End Class

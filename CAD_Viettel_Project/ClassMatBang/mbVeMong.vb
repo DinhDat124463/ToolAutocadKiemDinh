@@ -20,15 +20,13 @@ Public Class mbVeMong
         End Try
 
     End Function
-
-
-
     Public Shared Sub Ve_Mong_0(b_bvemong0 As Double, b_hvemong0 As Double, xxoay As Double, yxoay As Double, Layer As String, Linetypescale As Double, TextHight As Double)
         Dim layermong0 As String = "10"
         Dim acDoc As Document = Application.DocumentManager.MdiActiveDocument
         Dim acCurDb As Database = acDoc.Database
         Dim curUCSMatrix As Matrix3d = acDoc.Editor.CurrentUserCoordinateSystem
         Dim curUCS As CoordinateSystem3d = curUCSMatrix.CoordinateSystem3d
+        Dim TileHatch As Double = Math.Max(b_b0mong, b_h0mong) / 10
         'Vẽ khugn A4
         VeKhungA4_MB(mbTile())
         'end
@@ -53,6 +51,22 @@ Public Class mbVeMong
         Mang_Toa_Do0(3) = New Point2d(-b_b0mong / 2, -b_h0mong / 2)
         Dim id_mong0 As ObjectId
         id_mong0 = Lib_Drawing.CreateNewPolyline(Mang_Toa_Do0, True)
+        If frmTTC.chkBeTongCoMoc.Checked = True Then
+            Dim id_comocngoai As New ObjectIdCollection
+            id_comocngoai.Add(id_mong0)
+            ' Ve be tong chong co moc mong Mo
+            Dim Mang_Toa_Comoc(3) As Point2d 'mong 0 ngoai
+            Mang_Toa_Comoc(0) = New Point2d(-1000, 1000)
+            Mang_Toa_Comoc(1) = New Point2d(1000, 1000)
+            Mang_Toa_Comoc(2) = New Point2d(1000, -1000)
+            Mang_Toa_Comoc(3) = New Point2d(-1000, -1000)
+            Dim id_Mang_Toa_Comoc As ObjectId
+            id_Mang_Toa_Comoc = Lib_Drawing.CreateNewPolyline(Mang_Toa_Comoc, True)
+            Dim id_Comoc As New ObjectIdCollection
+            id_Comoc.Add(id_Mang_Toa_Comoc)
+            Lib_Drawing.CreateHatch_2MienBao(id_Comoc, id_comocngoai, "AR-CONC", 0, TileHatch)
+        End If
+
         Dim GocXoay As Double = Lib_Drawing.mbTinhgoc1Update(xxoay, yxoay) '' Xoay mong 0
         If ((x1 = 0) Or (y1 = 0) Or (x2 = 0) Or (y2 = 0) Or (x3 = 0) Or (y3 = 0)) Then
             'GocXoay = 0
@@ -812,30 +826,31 @@ Public Class mbVeMong
         End If
 
         If (x1 <= 0) And (y1 >= 0) Then
-            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(3))
-            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(0))
-            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(1))
-            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(2))
+            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(3))
+            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(0))
+            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(1))
+            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(2))
 
         ElseIf (x1 <= 0) And (y1 <= 0) Then
-            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(2))
-            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(3))
-            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(0))
-            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(1))
+            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(2))
+            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(3))
+            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(0))
+            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(1))
 
         ElseIf (x1 >= 0) And (y1 >= 0) Then
-            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(0))
-            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(1))
-            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(2))
-            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(3))
+            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(0))
+            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(1))
+            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(2))
+            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(3))
 
         ElseIf (x1 >= 0) And (y1 <= 0) Then
-            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(1))
-            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(2))
-            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(3))
-            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(0))
+            TaoTextTrenMB(ID_Line1, TinhGocDuongThangMB(ID_Line1, Mang_Toa_Do5(1)), "", Mang_Toa_Do5(1))
+            TaoTextTrenMB(ID_Line2, TinhGocDuongThangMB(ID_Line2, Mang_Toa_Do5(2)), "", Mang_Toa_Do5(2))
+            TaoTextTrenMB(ID_Line3, TinhGocDuongThangMB(ID_Line3, Mang_Toa_Do5(3)), "", Mang_Toa_Do5(3))
+            TaoTextTrenMB(ID_Line4, TinhGocDuongThangMB(ID_Line4, Mang_Toa_Do5(0)), "", Mang_Toa_Do5(0))
 
         End If
+
 
         '' thay doi thuoc tinh day 
         Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
@@ -1090,8 +1105,14 @@ Public Class mbVeMong
             b_CaoDoMong = Val(frmTTC.dgvToaDoMong.Rows(2).Cells(3).Value)
         ElseIf Text.Contains("4") Then
             b_CaoDoMong = Val(frmTTC.dgvToaDoMong.Rows(3).Cells(3).Value)
+            ' Khai báo thêm cao độ móng phụ
+        ElseIf Text.Contains("5") Then
+            b_CaoDoMong = Val(frmTTC.dgvToaDoMong.Rows(4).Cells(3).Value)
+        ElseIf Text.Contains("6") Then
+            b_CaoDoMong = Val(frmTTC.dgvToaDoMong.Rows(5).Cells(3).Value)
         ElseIf Text.Contains("0") Then
             b_CaoDoMong = Val(frmTTC.txtCaoDoMong.Text)
+            '.....................
         End If
         If b_CaoDoMong > 0 Then
             CaoDo = "+" & Format(b_CaoDoMong, "00.00")
@@ -1114,25 +1135,28 @@ Public Class mbVeMong
                 If ((Toado_x) <= 0 And (Toado_y) >= 0) Then ' vitri1
                     b_bmove = b_bvemong / 2 - Math.Min(b_bvemong, b_hvemong) / 6 - Math.Min(b_bvemong, b_hvemong) / 6
                     b_hmove = 0
+                    ' bên trong
                     Dim mang_toa_do(3) As Point2d
-                    mang_toa_do(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
+                    mang_toa_do(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + 900 - 200)
+                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + 900 - 200)
+                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - 900 + 200)
+                    mang_toa_do(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - 900 + 200)
                     Dim id_vuongngoai As ObjectId
                     id_vuongngoai = Lib_Drawing.CreateNewPolyline(mang_toa_do, True)
+                    ' Ngoài cùng
                     Dim mang_toa_do_1(3) As Point2d
-                    mang_toa_do_1(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
-                    mang_toa_do_1(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
+                    mang_toa_do_1(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y + 900)
+                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + 900)
+                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - 900)
+                    mang_toa_do_1(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y - 900)
                     Dim id_vuongtrong As ObjectId
                     id_vuongtrong = Lib_Drawing.CreateNewPolyline(mang_toa_do_1, True)
+
                     Dim mang_toa_do_2(3) As Point2d 've 2 duong thang dut doan
-                    mang_toa_do_2(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + b_hvemong / 2)
+                    mang_toa_do_2(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(1) = New Point2d(Toado_x + b_bvemong / 2, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(2) = New Point2d(Toado_x + b_bvemong / 2, Toado_y - b_hvemong / 2)
-                    mang_toa_do_2(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - b_hvemong / 2)
+                    mang_toa_do_2(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - b_hvemong / 2)
                     Dim id_vuong2 As ObjectId
                     id_vuong2 = Lib_Drawing.CreateNewPolyline(mang_toa_do_2, True)
                     Dim mang_toa_do_3(3) As Point2d 've hinh chu nhat lien doan 
@@ -1142,8 +1166,10 @@ Public Class mbVeMong
                     mang_toa_do_3(3) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - b_hvemong / 2)
                     Dim id_vuong3 As ObjectId
                     id_vuong3 = Lib_Drawing.CreateNewPolyline(mang_toa_do_3, True)
+                    Dim id_vuong3_hactch As New ObjectIdCollection
+                    id_vuong3_hactch.Add(id_vuong3)
                     Dim id_line As ObjectId
-                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2, 0))
+                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - 700, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + 700, 0))
                     Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
                         vuongtrong = acTrans.GetObject(id_vuongtrong, OpenMode.ForWrite)
                         vuongtrong.Layer = Layer
@@ -1201,10 +1227,10 @@ Public Class mbVeMong
                     Lib_Drawing.CreateHatch_1MienBao(id_coll, "SOLID", 0, 1)
                     If frmTTC.chkBeTongCoMoc.Checked = True Then
                         Dim mang_toa_do_4(3) As Point2d 've hinh chu nhat be tong chong co moc           
-                        mang_toa_do_4(0) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(1) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(2) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
-                        mang_toa_do_4(3) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
+                        mang_toa_do_4(0) = New Point2d(Toado_x - 1000, Toado_y + 1000)
+                        mang_toa_do_4(1) = New Point2d(Toado_x + 1000, Toado_y + 1000)
+                        mang_toa_do_4(2) = New Point2d(Toado_x + 1000, Toado_y - 1000)
+                        mang_toa_do_4(3) = New Point2d(Toado_x - 1000, Toado_y - 1000)
                         Dim id_vuong4 As ObjectId
                         id_vuong4 = Lib_Drawing.CreateNewPolyline(mang_toa_do_4, True)
                         Lib_Drawing.RotateEntity(id_vuong4, Matrix3d.Rotation(goctg, curUCS.Zaxis, New Point3d(Toado_x, Toado_y, 0)))
@@ -1216,7 +1242,7 @@ Public Class mbVeMong
                         End Using
                         Dim id_coll2 As New ObjectIdCollection
                         id_coll2.Add(id_vuong4)
-                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_coll, "AR-CONC", 0, TileHatch)
+                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_vuong3_hactch, "AR-CONC", 0, TileHatch)
                     End If
                 ElseIf ((Toado_x) >= 0 And (Toado_y) >= 0) Then 'vitri2
                     b_bmove = b_bvemong / 2 - Math.Min(b_bvemong, b_hvemong) / 6 - Math.Min(b_bvemong, b_hvemong) / 6
@@ -1224,24 +1250,24 @@ Public Class mbVeMong
                     'b_bmove = b_bvemong / 2 - b_hvemong / 5
                     'b_hmove = 0
                     Dim mang_toa_do(3) As Point2d
-                    mang_toa_do(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
+                    mang_toa_do(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + 900 - 200)
+                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + 900 - 200)
+                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - 900 + 200)
+                    mang_toa_do(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - 900 + 200)
                     Dim id_vuongngoai As ObjectId
                     id_vuongngoai = Lib_Drawing.CreateNewPolyline(mang_toa_do, True)
                     Dim mang_toa_do_1(3) As Point2d
-                    mang_toa_do_1(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
-                    mang_toa_do_1(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
+                    mang_toa_do_1(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y + 900)
+                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + 900)
+                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - 900)
+                    mang_toa_do_1(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y - 900)
                     Dim id_vuongtrong As ObjectId
                     id_vuongtrong = Lib_Drawing.CreateNewPolyline(mang_toa_do_1, True)
                     Dim mang_toa_do_2(3) As Point2d 've 2 duong thang dut doan
-                    mang_toa_do_2(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + b_hvemong / 2)
+                    mang_toa_do_2(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(1) = New Point2d(Toado_x + b_bvemong / 2, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(2) = New Point2d(Toado_x + b_bvemong / 2, Toado_y - b_hvemong / 2)
-                    mang_toa_do_2(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - b_hvemong / 2)
+                    mang_toa_do_2(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - b_hvemong / 2)
                     Dim id_vuong2 As ObjectId
                     id_vuong2 = Lib_Drawing.CreateNewPolyline(mang_toa_do_2, True)
                     Dim mang_toa_do_3(3) As Point2d 've hinh chu nhat lien doan 
@@ -1251,8 +1277,10 @@ Public Class mbVeMong
                     mang_toa_do_3(3) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - b_hvemong / 2)
                     Dim id_vuong3 As ObjectId
                     id_vuong3 = Lib_Drawing.CreateNewPolyline(mang_toa_do_3, True)
+                    Dim id_vuong3_hactch As New ObjectIdCollection
+                    id_vuong3_hactch.Add(id_vuong3)
                     Dim id_line As ObjectId
-                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2, 0))
+                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - 700, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + 700, 0))
                     Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
                         vuongtrong = acTrans.GetObject(id_vuongtrong, OpenMode.ForWrite)
                         vuongtrong.Layer = Layer
@@ -1308,10 +1336,10 @@ Public Class mbVeMong
                     Lib_Drawing.CreateHatch_1MienBao(id_coll, "SOLID", 0, 1)
                     If frmTTC.chkBeTongCoMoc.Checked = True Then
                         Dim mang_toa_do_4(3) As Point2d 've hinh chu nhat be tong chong co moc                    
-                        mang_toa_do_4(0) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(1) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(2) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
-                        mang_toa_do_4(3) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
+                        mang_toa_do_4(0) = New Point2d(Toado_x - 1000, Toado_y + 1000)
+                        mang_toa_do_4(1) = New Point2d(Toado_x + 1000, Toado_y + 1000)
+                        mang_toa_do_4(2) = New Point2d(Toado_x + 1000, Toado_y - 1000)
+                        mang_toa_do_4(3) = New Point2d(Toado_x - 1000, Toado_y - 1000)
                         Dim id_vuong4 As ObjectId
                         id_vuong4 = Lib_Drawing.CreateNewPolyline(mang_toa_do_4, True)
                         Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
@@ -1323,30 +1351,30 @@ Public Class mbVeMong
                         Lib_Drawing.RotateEntity(id_vuong4, Matrix3d.Rotation(goctg, curUCS.Zaxis, New Point3d(Toado_x, Toado_y, 0)))
                         Dim id_coll2 As New ObjectIdCollection
                         id_coll2.Add(id_vuong4)
-                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_coll, "AR-CONC", 0, TileHatch)
+                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_vuong3_hactch, "AR-CONC", 0, TileHatch)
                     End If
                 ElseIf ((Toado_x) <= 0 And (Toado_y) <= 0) Then 'vitri4
                     b_bmove = b_bvemong / 2 - Math.Min(b_bvemong, b_hvemong) / 6 - Math.Min(b_bvemong, b_hvemong) / 6
                     b_hmove = 0
                     Dim mang_toa_do(3) As Point2d
-                    mang_toa_do(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
+                    mang_toa_do(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + 900 - 200)
+                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + 900 - 200)
+                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - 900 + 200)
+                    mang_toa_do(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - 900 + 200)
                     Dim id_vuongngoai As ObjectId
                     id_vuongngoai = Lib_Drawing.CreateNewPolyline(mang_toa_do, True)
                     Dim mang_toa_do_1(3) As Point2d
-                    mang_toa_do_1(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
-                    mang_toa_do_1(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
+                    mang_toa_do_1(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y + 900)
+                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + 900)
+                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - 900)
+                    mang_toa_do_1(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y - 900)
                     Dim id_vuongtrong As ObjectId
                     id_vuongtrong = Lib_Drawing.CreateNewPolyline(mang_toa_do_1, True)
                     Dim mang_toa_do_2(3) As Point2d 've 2 duong thang dut doan
-                    mang_toa_do_2(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + b_hvemong / 2)
+                    mang_toa_do_2(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - b_hvemong / 2)
-                    mang_toa_do_2(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - b_hvemong / 2)
+                    mang_toa_do_2(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - b_hvemong / 2)
                     Dim id_vuong2 As ObjectId
                     id_vuong2 = Lib_Drawing.CreateNewPolyline(mang_toa_do_2, True)
                     Dim mang_toa_do_3(3) As Point2d 've hinh chu nhat lien doan 
@@ -1356,8 +1384,10 @@ Public Class mbVeMong
                     mang_toa_do_3(3) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - b_hvemong / 2)
                     Dim id_vuong3 As ObjectId
                     id_vuong3 = Lib_Drawing.CreateNewPolyline(mang_toa_do_3, True)
+                    Dim id_vuong3_hactch As New ObjectIdCollection
+                    id_vuong3_hactch.Add(id_vuong3)
                     Dim id_line As ObjectId
-                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2, 0))
+                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - 700, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + 700, 0))
                     Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
                         vuongtrong = acTrans.GetObject(id_vuongtrong, OpenMode.ForWrite)
                         vuongtrong.Layer = Layer
@@ -1416,10 +1446,10 @@ Public Class mbVeMong
                     Lib_Drawing.CreateHatch_1MienBao(id_coll, "SOLID", 0, 1)
                     If frmTTC.chkBeTongCoMoc.Checked = True Then
                         Dim mang_toa_do_4(3) As Point2d 've hinh chu nhat be tong chong co moc                  
-                        mang_toa_do_4(0) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(1) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(2) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
-                        mang_toa_do_4(3) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
+                        mang_toa_do_4(0) = New Point2d(Toado_x - 1000, Toado_y + 1000)
+                        mang_toa_do_4(1) = New Point2d(Toado_x + 1000, Toado_y + 1000)
+                        mang_toa_do_4(2) = New Point2d(Toado_x + 1000, Toado_y - 1000)
+                        mang_toa_do_4(3) = New Point2d(Toado_x - 1000, Toado_y - 1000)
                         Dim id_vuong4 As ObjectId
                         id_vuong4 = Lib_Drawing.CreateNewPolyline(mang_toa_do_4, True)
                         Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
@@ -1431,30 +1461,30 @@ Public Class mbVeMong
                         Lib_Drawing.RotateEntity(id_vuong4, Matrix3d.Rotation(goctg, curUCS.Zaxis, New Point3d(Toado_x, Toado_y, 0)))
                         Dim id_coll2 As New ObjectIdCollection
                         id_coll2.Add(id_vuong4)
-                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_coll, "AR-CONC", 0, TileHatch)
+                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_vuong3_hactch, "AR-CONC", 0, TileHatch)
                     End If
                 ElseIf ((Toado_x) >= 0 And (Toado_y) <= 0) Then 'vitri3
                     b_bmove = b_bvemong / 2 - Math.Min(b_bvemong, b_hvemong) / 6 - Math.Min(b_bvemong, b_hvemong) / 6
                     b_hmove = 0
                     Dim mang_toa_do(3) As Point2d
-                    mang_toa_do(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
-                    mang_toa_do(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2)
+                    mang_toa_do(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + 900 - 200)
+                    mang_toa_do(1) = New Point2d(Toado_x - b_bvemong / 2, Toado_y + 900 - 200)
+                    mang_toa_do(2) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - 900 + 200)
+                    mang_toa_do(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - 900 + 200)
                     Dim id_vuongngoai As ObjectId
                     id_vuongngoai = Lib_Drawing.CreateNewPolyline(mang_toa_do, True)
                     Dim mang_toa_do_1(3) As Point2d
-                    mang_toa_do_1(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2 + ofset)
-                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
-                    mang_toa_do_1(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3 + ofset, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2 - ofset)
+                    mang_toa_do_1(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y + 900)
+                    mang_toa_do_1(1) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y + 900)
+                    mang_toa_do_1(2) = New Point2d(Toado_x - b_bvemong / 2 - ofset, Toado_y - 900)
+                    mang_toa_do_1(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset), Toado_y - 900)
                     Dim id_vuongtrong As ObjectId
                     id_vuongtrong = Lib_Drawing.CreateNewPolyline(mang_toa_do_1, True)
                     Dim mang_toa_do_2(3) As Point2d 've 2 duong thang dut doan
-                    mang_toa_do_2(0) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y + b_hvemong / 2)
+                    mang_toa_do_2(0) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(1) = New Point2d(Toado_x + b_bvemong / 2, Toado_y + b_hvemong / 2)
                     mang_toa_do_2(2) = New Point2d(Toado_x + b_bvemong / 2, Toado_y - b_hvemong / 2)
-                    mang_toa_do_2(3) = New Point2d(Toado_x - b_bvemong / 2 + b_bvemong * 3, Toado_y - b_hvemong / 2)
+                    mang_toa_do_2(3) = New Point2d(Toado_x + 1800 - (b_bvemong / 2 + ofset) - 200, Toado_y - b_hvemong / 2)
                     Dim id_vuong2 As ObjectId
                     id_vuong2 = Lib_Drawing.CreateNewPolyline(mang_toa_do_2, True)
                     Dim mang_toa_do_3(3) As Point2d 've hinh chu nhat lien doan                    
@@ -1464,8 +1494,10 @@ Public Class mbVeMong
                     mang_toa_do_3(3) = New Point2d(Toado_x - b_bvemong / 2, Toado_y - b_hvemong / 2)
                     Dim id_vuong3 As ObjectId
                     id_vuong3 = Lib_Drawing.CreateNewPolyline(mang_toa_do_3, True)
+                    Dim id_vuong3_hactch As New ObjectIdCollection
+                    id_vuong3_hactch.Add(id_vuong3)
                     Dim id_line As ObjectId
-                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - Math.Min(b_bvemong, b_hvemong) * 1.2, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + Math.Min(b_bvemong, b_hvemong) * 1.2, 0))
+                    id_line = Lib_Drawing.CreateLine(New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y - 700, 0), New Point3d(Toado_x - Math.Min(b_bvemong, b_hvemong) / 3, Toado_y + 700, 0))
                     Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
                         vuongtrong = acTrans.GetObject(id_vuongtrong, OpenMode.ForWrite)
                         vuongtrong.Layer = Layer
@@ -1521,10 +1553,10 @@ Public Class mbVeMong
                     Lib_Drawing.CreateHatch_1MienBao(id_coll, "SOLID", 0, 1)
                     If frmTTC.chkBeTongCoMoc.Checked = True Then
                         Dim mang_toa_do_4(3) As Point2d 've hinh chu nhat be tong chong co moc                    
-                        mang_toa_do_4(0) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(1) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y + b_hvemong * 1.5)
-                        mang_toa_do_4(2) = New Point2d(Toado_x + b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
-                        mang_toa_do_4(3) = New Point2d(Toado_x - b_bvemong * 1.5, Toado_y - b_hvemong * 1.5)
+                        mang_toa_do_4(0) = New Point2d(Toado_x - 1000, Toado_y + 1000)
+                        mang_toa_do_4(1) = New Point2d(Toado_x + 1000, Toado_y + 1000)
+                        mang_toa_do_4(2) = New Point2d(Toado_x + 1000, Toado_y - 1000)
+                        mang_toa_do_4(3) = New Point2d(Toado_x - 1000, Toado_y - 1000)
                         Dim id_vuong4 As ObjectId
                         id_vuong4 = Lib_Drawing.CreateNewPolyline(mang_toa_do_4, True)
                         Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
@@ -1536,7 +1568,7 @@ Public Class mbVeMong
                         Lib_Drawing.RotateEntity(id_vuong4, Matrix3d.Rotation(goctg, curUCS.Zaxis, New Point3d(Toado_x, Toado_y, 0)))
                         Dim id_coll2 As New ObjectIdCollection
                         id_coll2.Add(id_vuong4)
-                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_coll, "AR-CONC", 0, TileHatch)
+                        Lib_Drawing.CreateHatch_2MienBao(id_coll2, id_vuong3_hactch, "AR-CONC", 0, TileHatch)
                     End If
                 End If
 
@@ -1991,6 +2023,7 @@ Public Class mbVeMong
                 '
             End If
 #End Region
+
 #Region "Vẽ móng trên mái"
         ElseIf (vitridat = "Trên mái") Then
             If ((Toado_x) <= 0 And (Toado_y) >= 0) Then ' vitri1
@@ -2101,6 +2134,7 @@ Public Class mbVeMong
         End If
 #End Region
     End Sub
+    Shared cottamgiac As Polyline
     Private Shared Sub taoblockcaotrinhmong(Toado_x As Double, Toado_y As Double, b_bvemong As Double, TextHight As Double, b_hvemong As Double, CaoDo As String)
         If Toado_x >= 0 And Toado_y >= 0 Then
             Lib_Drawing.insertBlock(New Point3d(Toado_x + b_bvemong / 2 + b_bvemong / 10 + TextHight * 32, Toado_y - b_hvemong / 2 - b_hvemong / 10 - TextHight, 0), "CaoTrinhMatBang", TiLeChu, CaoDo)
@@ -3891,6 +3925,64 @@ Public Class mbVeMong
         End If
 #End Region
     End Sub
+    Public Shared Sub Ve_Cot_Tam_Giac_update_Mongphu(CanhTamGiac As Double, xxoay As Double, yxoay As Double, Layer As String, LayerDay As String, Linetypescale As Double, Dimscale As Double, TextHight As Double, x1 As Double, y1 As Double, x2 As Double, y2 As Double, x3 As Double, y3 As Double, loaiday As Integer)
+        Dim acDoc As Document = Application.DocumentManager.MdiActiveDocument
+        Dim acCurDb As Database = acDoc.Database
+        Dim curUCSMatrix As Matrix3d = acDoc.Editor.CurrentUserCoordinateSystem
+        Dim curUCS As CoordinateSystem3d = curUCSMatrix.CoordinateSystem3d
+
+        ' ve day 
+        Dim ID_Line1 As ObjectId ' day mong 1
+        Dim line1 As Line
+        Dim ID_Line2 As ObjectId ' day mong 2
+        Dim line2 As Line
+        Dim ID_Line3 As ObjectId ' day mong 3
+        Dim line3 As Line
+        If (loaiday = 3) Then
+            For i = 0 To 2 Step 1
+                Dim DiemNoiDay As Point2d = cottamgiac.GetPoint2dAt(i)
+                If (Math.Round((DiemNoiDay.X), 2) * x1) >= 0 And (Math.Round((DiemNoiDay.Y), 2) * y1) >= 0 Then
+                    ID_Line1 = Lib_Drawing.CreateLine(New Point3d(x1, y1, 0), New Point3d(0, 0, 0))
+                    If Kc_Mongphu1 = 0 And Kc_Mongphu2 = 0 And Kc_Mongphu3 = 0 Then
+                        Dim goc As Double = TinhGocDuongThangMB(ID_Line1, DiemNoiDay)
+                        TaoTextTrenMB(ID_Line1, goc, "", DiemNoiDay)
+                    End If
+                End If
+            Next
+            For i = 0 To 2 Step 1
+                Dim DiemNoiDay As Point2d = cottamgiac.GetPoint2dAt(i)
+                If (Math.Round((DiemNoiDay.X), 2) * x2) >= 0 And (Math.Round((DiemNoiDay.Y), 2) * y2) >= 0 Then
+                    ID_Line2 = Lib_Drawing.CreateLine(New Point3d(x2, y2, 0), New Point3d(0, 0, 0))
+                    If Kc_Mongphu1 = 0 And Kc_Mongphu2 = 0 And Kc_Mongphu3 = 0 Then
+                        Dim goc As Double = TinhGocDuongThangMB(ID_Line2, DiemNoiDay)
+                        TaoTextTrenMB(ID_Line2, goc, "", DiemNoiDay)
+                    End If
+                End If
+            Next
+            For i = 0 To 2 Step 1
+                Dim DiemNoiDay As Point2d = cottamgiac.GetPoint2dAt(i)
+                If (Math.Round((DiemNoiDay.X), 2) * x3) >= 0 And (Math.Round((DiemNoiDay.Y), 2) * y3) >= 0 Then
+                    ID_Line3 = Lib_Drawing.CreateLine(New Point3d(x3, y3, 0), New Point3d(0, 0, 0))
+                    If Kc_Mongphu1 = 0 And Kc_Mongphu2 = 0 And Kc_Mongphu3 = 0 Then
+                        Dim goc As Double = TinhGocDuongThangMB(ID_Line3, DiemNoiDay)
+                        TaoTextTrenMB(ID_Line3, goc, "", DiemNoiDay)
+                    End If
+                End If
+            Next
+            Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
+                line1 = acTrans.GetObject(ID_Line1, OpenMode.ForWrite)
+                line2 = acTrans.GetObject(ID_Line2, OpenMode.ForWrite)
+                line3 = acTrans.GetObject(ID_Line3, OpenMode.ForWrite)
+                line1.Layer = LayerDay
+                line2.Layer = LayerDay
+                line3.Layer = LayerDay
+                acTrans.Commit()
+            End Using
+        End If
+        'If (loaiday = 3) Then
+        '    mbVeMong.Dim3MongCotTamGiac(x1, y1, x2, y2, x3, y3, b_bmong, Dimscale)
+        'End If
+    End Sub
     Public Shared Sub Ve_Cot_Tam_Giac_update(CanhTamGiac As Double, xxoay As Double, yxoay As Double, Layer As String, LayerDay As String, Linetypescale As Double, Dimscale As Double, TextHight As Double, x1 As Double, y1 As Double, x2 As Double, y2 As Double, x3 As Double, y3 As Double, x4 As Double, y4 As Double, loaiday As Integer)
         Dim acDoc As Document = Application.DocumentManager.MdiActiveDocument
         Dim acCurDb As Database = acDoc.Database
@@ -3905,7 +3997,7 @@ Public Class mbVeMong
         Dim GocXoay As Double = Lib_Drawing.mbTinhgoc1Update(xxoay, yxoay) ''xoay cot tam giac
         Lib_Drawing.RotateEntity(id_cottamgiac, Matrix3d.Rotation(GocXoay, curUCS.Zaxis, New Point3d(0, 0, 0)))
         acCurDb = Application.DocumentManager.MdiActiveDocument.Database ' thay doi thuoc tinh 
-        Dim cottamgiac As Polyline
+        'Dim cottamgiac As Polyline
         Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
             cottamgiac = acTrans.GetObject(id_cottamgiac, OpenMode.ForWrite)
             cottamgiac.Layer = Layer
@@ -5100,6 +5192,7 @@ Public Class mbVeMong
         Dim DoLech
         Return goc
     End Function
+
     Public Shared Sub TaoTextTrenMB(id As ObjectId, GocXoay As Double, NoiDung As String, DiemNoiDay As Point2d)
         Dim acDoc As Document = Application.DocumentManager.MdiActiveDocument
         Dim acCurDb As Database = acDoc.Database
@@ -5135,7 +5228,7 @@ Public Class mbVeMong
 
         ElseIf DiemNoiDay.X <= 0 And DiemNoiDay.Y <= 0 Then
             DiemDat = New Point3d((diem1.X + diem2.X) / 2 - 0, (diem1.Y + diem2.Y) / 2 - 0, 0)
-            id_lineclon = Lib_Drawing.CreateLine(DiemDat, New Point3d(DiemDat.X - TiLeChu * 4, DiemDat.Y, 0))
+            id_lineclon = Lib_Drawing.CreateLine(DiemDat, New Point3d(DiemDat.X - TiLeChu * 3, DiemDat.Y, 0))
             Lib_Drawing.RotateEntity(id_lineclon, Matrix3d.Rotation(((Math.PI) / 2 - GocXoay), curUCS.Zaxis, DiemDat))
             Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
                 lineclon = acTrans.GetObject(id_lineclon, OpenMode.ForWrite)
@@ -5158,7 +5251,7 @@ Public Class mbVeMong
             Lib_Drawing.CreateNewMText1(DiemText, NoiDung, TiLeChu, +GocXoay)
         ElseIf DiemNoiDay.X >= 0 And DiemNoiDay.Y <= 0 Then
             DiemDat = New Point3d((diem1.X + diem2.X) / 2 + 0, (diem1.Y + diem2.Y) / 2 + 0, 0)
-            id_lineclon = Lib_Drawing.CreateLine(DiemDat, New Point3d(DiemDat.X + TiLeChu * 4, DiemDat.Y, 0))
+            id_lineclon = Lib_Drawing.CreateLine(DiemDat, New Point3d(DiemDat.X + TiLeChu * 3, DiemDat.Y, 0))
             Lib_Drawing.RotateEntity(id_lineclon, Matrix3d.Rotation(((Math.PI) / 2 - GocXoay), curUCS.Zaxis, DiemDat))
             Using acTrans As Transaction = acCurDb.TransactionManager.StartTransaction()
                 lineclon = acTrans.GetObject(id_lineclon, OpenMode.ForWrite)

@@ -159,6 +159,69 @@ Public Class clsMatDung
 
         Return scalingFactor
     End Function
+    Public Shared Sub MatY_Z_CoGa_Mongphu(ChieuCaoDot As String,
+                                   BeRongCot As String,
+                                   vaom1 As Double,
+                                   vaom2 As Double,
+                                   listchieucaoday As List(Of Double),
+                                   LoaiDot As List(Of String),
+                                   CaoMong2 As Double,
+                                   CaoMong3 As Double,
+                                   Rongmong2 As Double,
+                                   Rongmong3 As Double,
+                                   CaoMong0 As Double,
+                                   Rongmong0 As Double,
+                                   loaimong As String,
+                                   zM1 As Double,
+                                   zM2 As Double,
+                                   Vitri As String, listViTriGaChongXay As List(Of Integer), SoTangDay As Integer)
+        'Vẽ khung A4
+        VeKhungA4_MD()
+#Region "Khai báo"
+        Dim ChieuCao As Double
+        Dim RongCot As Double
+        ChieuCao = Convert.ToDouble(ChieuCaoDot)
+        RongCot = Convert.ToDouble(BeRongCot)
+        Dim xM1 As Double = vaom1
+        Dim xM2 As Double = vaom2
+        Dim RongGa As Double = 3 * RongCot
+
+        Dim SoModule As Integer
+        Dim ChieuCaoModule As Double
+        ChieuCao = ChieuCao * 1000
+
+        ChieuCaoModule = Convert.ToDouble(frmTTC.BangChieuCaoDot.Rows(0).Cells(2).Value) * 1000
+        SoModule = ChieuCao / ChieuCaoModule
+
+        Dim doc As Document = Application.DocumentManager.MdiActiveDocument
+        Dim db As Database = doc.Database
+        Dim ed As Editor = doc.Editor
+        Dim tr As Transaction = db.TransactionManager.StartTransaction
+#End Region
+#Region " Vẽ Loại Gá CX"
+        For i = 0 To SoTangDay - 1
+            For j = 0 To listViTriGaChongXay.Count - 1
+                If i = listViTriGaChongXay(j) Then
+                    'Ve ga chong xoay
+                    Dim Toa_do_Gia(3) As Point2d
+                    Toa_do_Gia(0) = New Point2d(RongGa, listchieucaoday(i) * 1000)
+                    Toa_do_Gia(1) = New Point2d(RongCot / 2, listchieucaoday(i) * 1000 - ChieuCaoModule)
+                    Toa_do_Gia(2) = New Point2d(-RongCot / 2, listchieucaoday(i) * 1000 - ChieuCaoModule)
+                    Toa_do_Gia(3) = New Point2d(-RongGa, listchieucaoday(i) * 1000)
+                    Lib_Drawing.CreateNewPolyline(Toa_do_Gia, True)
+                End If
+            Next
+        Next
+#End Region
+#Region " Vẽ Loại Móng"
+        VeMong(CaoMong2, CaoMong3, Rongmong2, Rongmong3, loaimong, xM1, zM1, xM2, zM2, CaoMong0, Rongmong0, tr)
+#End Region
+#Region " Vẽ Dây co"
+
+#End Region
+
+    End Sub
+
     Public Shared Sub MatY_Z_CoGa(ChieuCaoDot As String,
                                    BeRongCot As String,
                                    vaom1 As Double,
@@ -224,6 +287,7 @@ Public Class clsMatDung
         Lib_Drawing.CreateLine(New Point3d(-RongCot / 2, TongCao, 0), New Point3d(-RongCot / 2, ChieuCaoModule * 4 + TongCao, 0))
 #End Region
 #Region " Vẽ Loại Gá CX"
+
         For i = 0 To SoTangDay - 1
             For j = 0 To listViTriGaChongXay.Count - 1
                 If i = listViTriGaChongXay(j) Then
@@ -237,6 +301,16 @@ Public Class clsMatDung
                 End If
             Next
         Next
+#End Region
+#Region "Ghi Chú GCX"
+        For i = 0 To SoTangDay - 1
+            For j = 0 To listViTriGaChongXay.Count - 1
+                If i = listViTriGaChongXay(j) Then
+                    Lib_Drawing.CreateNewMText(New Point3d(-RongCot / 2, listchieucaoday(i) * 1000, 0), "Gá Chống Xoay", TiLeChu_MD)
+                End If
+            Next
+        Next
+
 #End Region
 #Region " Vẽ Loại Móng"
         VeMong(CaoMong2, CaoMong3, Rongmong2, Rongmong3, loaimong, xM1, zM1, xM2, zM2, CaoMong0, Rongmong0, tr)
@@ -265,26 +339,53 @@ Public Class clsMatDung
             Dim caodot = Convert.ToDouble(frmTTC.BangChieuCaoDot.Rows(i).Cells(1).Value) * 1000
             Lib_Drawing.CreateNewMText1(New Point3d(ToaDoXText - TiLeChu_MD * 1.5, CaoDoChanDot(i + 1) - caodot / 1.5, 0), "Đốt " & i + 1, TiLeChu_MD, Math.PI / 2)
         Next
+
 #End Region
 #Region " Vẽ Dây co"
-        For j = 0 To listViTriGaChongXay.Count - 1
-            VeDaycoTrai(listchieucaoday(listViTriGaChongXay(j)), Convert.ToDouble(-RongGa * 2), -xM1, zM1)
-            VeDaycoPhai(listchieucaoday(listViTriGaChongXay(j)), Convert.ToDouble(RongGa * 2), xM1, zM2)
-        Next
-        ''Vẽ Day co
-        For i = 0 To SoTangDay - 1
-            If KiemTra(i, listViTriGaChongXay) Then
-            Else
-                VeDaycoTrai(listchieucaoday(i), Convert.ToDouble(-RongCot), -xM1, zM1)
-                VeDaycoPhai(listchieucaoday(i), Convert.ToDouble(RongCot), xM1, zM2)
-            End If
 
-        Next
 
 #End Region
 
     End Sub
+    Public Shared Sub MatY_Z_KoGa_Mongphu(ChieuCaoDot As String,
+                                   BeRongCot As String,
+                                   vaom1 As Double,
+                                   vaom2 As Double,
+                                   listchieucaoday As List(Of Double),
+                                   LoaiDot As List(Of String),
+                                   CaoMong2 As Double,
+                                   CaoMong3 As Double,
+                                   Rongmong2 As Double,
+                                   Rongmong3 As Double,
+                                   CaoMong0 As Double,
+                                   Rongmong0 As Double,
+                                   loaimong As String,
+                                   zM1 As Double,
+                                   zM2 As Double,
+                                   Vitri As String, listViTriGaChongXay As List(Of Integer), SoTangDay As Integer)
+        Dim doc As Document = Application.DocumentManager.MdiActiveDocument
+        Dim db As Database = doc.Database
+        Dim ed As Editor = doc.Editor
+        Dim tr As Transaction = db.TransactionManager.StartTransaction
+        Dim RongCot As Double
+        RongCot = Convert.ToDouble(BeRongCot)
+        Dim xM1 As Double = vaom1
+        Dim xM2 As Double = vaom2
+#Region " Vẽ Loại Móng"
+        VeMong(CaoMong2, CaoMong3, Rongmong2, Rongmong3, loaimong, xM1, zM1, xM2, zM2, CaoMong0, Rongmong0, tr)
+#End Region
+#Region " Vẽ Dây co"
+        ''Vẽ Day co chỉ nối tới tầng thứ 2
+        For i = 0 To 1
+            If KiemTra(i, listViTriGaChongXay) Then
+            Else
+                VeDaycoTrai(listchieucaoday(i), Convert.ToDouble(-RongCot), -xM1, zM1)
+                VeDaycoPhai(listchieucaoday(i), Convert.ToDouble(RongCot), xM2, zM2)
+            End If
+        Next
+#End Region
 
+    End Sub
     Public Shared Sub MatY_Z_KoGa(ChieuCaoDot As String,
                                    BeRongCot As String,
                                    vaom1 As Double,
@@ -383,15 +484,24 @@ Public Class clsMatDung
             VeDaycoTrai(listchieucaoday(listViTriGaChongXay(j)), Convert.ToDouble(-RongGa * 2), -xM1, zM1)
             VeDaycoPhai(listchieucaoday(listViTriGaChongXay(j)), Convert.ToDouble(RongGa * 2), xM2, zM2)
         Next
-        ''Vẽ Day co
-        For i = 0 To SoTangDay - 1
-            If KiemTra(i, listViTriGaChongXay) Then
-            Else
-                VeDaycoTrai(listchieucaoday(i), Convert.ToDouble(-RongCot), -xM1, zM1)
-                VeDaycoPhai(listchieucaoday(i), Convert.ToDouble(RongCot), xM2, zM2)
-            End If
-        Next
-
+        'Vẽ Day co
+        If ThongTinChung.SoMong = 6 Then
+            For i = 2 To SoTangDay - 1
+                If KiemTra(i, listViTriGaChongXay) Then
+                Else
+                    VeDaycoTrai(listchieucaoday(i), Convert.ToDouble(-RongCot), -xM1, zM1)
+                    VeDaycoPhai(listchieucaoday(i), Convert.ToDouble(RongCot), xM2, zM2)
+                End If
+            Next
+        Else
+            For i = 0 To SoTangDay - 1
+                If KiemTra(i, listViTriGaChongXay) Then
+                Else
+                    VeDaycoTrai(listchieucaoday(i), Convert.ToDouble(-RongCot), -xM1, zM1)
+                    VeDaycoPhai(listchieucaoday(i), Convert.ToDouble(RongCot), xM2, zM2)
+                End If
+            Next
+        End If
 #End Region
 
     End Sub

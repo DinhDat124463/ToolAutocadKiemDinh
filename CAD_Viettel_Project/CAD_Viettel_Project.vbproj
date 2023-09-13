@@ -51,33 +51,35 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="accoremgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="accoremgd, Version=23.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\ITsoft\ThietKeTuyenCap\2023\accoremgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\accoremgd.dll</HintPath>
     </Reference>
-    <Reference Include="acdbmgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="acdbmgd, Version=23.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\ITsoft\ThietKeTuyenCap\2023\acdbmgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\acdbmgd.dll</HintPath>
     </Reference>
-    <Reference Include="acdbmgdbrep, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="acdbmgdbrep, Version=23.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\ITsoft\ThietKeTuyenCap\2023\acdbmgdbrep.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\acdbmgdbrep.dll</HintPath>
     </Reference>
-    <Reference Include="acmgd, Version=24.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="acmgd, Version=23.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\ITsoft\ThietKeTuyenCap\2023\acmgd.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\acmgd.dll</HintPath>
     </Reference>
-    <Reference Include="AdWindows, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="AdWindows, Version=2018.11.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\ITsoft\ThietKeTuyenCap\2023\AdWindows.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\AdWindows.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.AutoCAD.Interop">
-      <HintPath>C:\ITsoft\ThietKeTuyenCap\2023\Autodesk.AutoCAD.Interop.dll</HintPath>
+    <Reference Include="Autodesk.AutoCAD.Interop, Version=17.0.54.0, Culture=neutral, PublicKeyToken=eed84259d7cbf30b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\Autodesk.AutoCAD.Interop.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.AutoCAD.Interop.Common">
-      <HintPath>C:\ITsoft\ThietKeTuyenCap\2023\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
+    <Reference Include="Autodesk.AutoCAD.Interop.Common, Version=17.0.54.0, Culture=neutral, PublicKeyToken=eed84259d7cbf30b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2021\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -421,7 +423,9 @@
     <None Include="Resources\TH1.png" />
     <None Include="Resources\icon_viettel.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

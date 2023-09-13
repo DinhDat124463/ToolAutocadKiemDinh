@@ -30,10 +30,22 @@ Public Class Form3Chan_3Mong_DD_KG
         Dim Linetylescale As Double = Tile
         Dim Dimscale As Double = TextHight
         mbVeMong.Ve_Mong_0(b_b0mong, b_h0mong, x1, y1, "1", Linetylescale, TextHight)
-        mbVeMong.Ve_Cot_Tam_Giac_update(b_a, x1, y1, "5", "2", Linetylescale, Dimscale, TextHight, x1, y1, x2, y2, x3, y3, x4, y4, 3)
-        mbVeMong.VeMong(x1, y1, b_bMong1, b_hMong1, b_a, b_bmove, b_hmove, "Móng M1", TextHight, Linetylescale, "1", "Dưới đất", b_Mong1)
-        mbVeMong.VeMong(x2, y2, b_bMong2, b_hMong2, b_a, b_bmove, b_hmove, "Móng M2", TextHight, Linetylescale, "1", "Dưới đất", b_Mong2)
-        mbVeMong.VeMong(x3, y3, b_bMong3, b_hMong3, b_a, b_bmove, b_hmove, "Móng M3", TextHight, Linetylescale, "1", "Dưới đất", b_Mong3)
+
+        If ThongTinChung.SoMong = 3 Then
+            mbVeMong.Ve_Cot_Tam_Giac_update(b_a, x1, y1, "5", "2", Linetylescale, Dimscale, TextHight, x1, y1, x2, y2, x3, y3, x4, y4, 3)
+            mbVeMong.VeMong(x1, y1, b_bMong1, b_hMong1, b_a, b_bmove, b_hmove, "Móng M1", TextHight, Linetylescale, "1", "Dưới đất", b_Mong1)
+            mbVeMong.VeMong(x2, y2, b_bMong2, b_hMong2, b_a, b_bmove, b_hmove, "Móng M2", TextHight, Linetylescale, "1", "Dưới đất", b_Mong2)
+            mbVeMong.VeMong(x3, y3, b_bMong3, b_hMong3, b_a, b_bmove, b_hmove, "Móng M3", TextHight, Linetylescale, "1", "Dưới đất", b_Mong3)
+        ElseIf ThongTinChung.SoMong = 6 Then
+            mbVeMong.Ve_Cot_Tam_Giac_update(b_a, x1, y1, "5", "2", Linetylescale, Dimscale, TextHight, x1, y1, x2, y2, x3, y3, x4, y4, 3)
+            mbVeMong.Ve_Cot_Tam_Giac_update_Mongphu(b_a, x1_phu, y1_phu, "5", "2", Linetylescale, Dimscale, TextHight, x1_phu, y1_phu, x2_phu, y2_phu, x3_phu, y3_phu, 3)
+            mbVeMong.VeMong(x1, y1, b_bMong1, b_hMong1, b_a, b_bmove, b_hmove, "Móng M1", TextHight, Linetylescale, "1", "Dưới đất", b_Mong1)
+            mbVeMong.VeMong(x2, y2, b_bMong2, b_hMong2, b_a, b_bmove, b_hmove, "Móng M2", TextHight, Linetylescale, "1", "Dưới đất", b_Mong2)
+            mbVeMong.VeMong(x3, y3, b_bMong3, b_hMong3, b_a, b_bmove, b_hmove, "Móng M3", TextHight, Linetylescale, "1", "Dưới đất", b_Mong3)
+            mbVeMong.VeMong(x1_phu, y1_phu, b_bmongphu1, b_hmongphu1, b_a, b_bmove, b_hmove, "Móng M4", TextHight, Linetylescale, "1", "Dưới đất", b_Mongphu1)
+            mbVeMong.VeMong(x2_phu, y2_phu, b_bmongphu2, b_hmongphu2, b_a, b_bmove, b_hmove, "Móng M5", TextHight, Linetylescale, "1", "Dưới đất", b_Mongphu2)
+            mbVeMong.VeMong(x3_phu, y3_phu, b_bmongphu3, b_hmongphu3, b_a, b_bmove, b_hmove, "Móng M6", TextHight, Linetylescale, "1", "Dưới đất", b_Mongphu3)
+        End If
         MsgBox("Đã vẽ xong! Tắt bỏ để xem")
 
     End Sub
