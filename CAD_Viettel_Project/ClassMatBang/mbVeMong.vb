@@ -183,6 +183,7 @@ Public Class mbVeMong
         Dim layermong0 As String = "10"
         Dim acDoc As Document = Application.DocumentManager.MdiActiveDocument
         Dim acCurDb As Database = acDoc.Database
+        'aaaaaaaaaaaaaaaaaaaaaaaaaaa
         Dim curUCSMatrix As Matrix3d = acDoc.Editor.CurrentUserCoordinateSystem
         Dim curUCS As CoordinateSystem3d = curUCSMatrix.CoordinateSystem3d
         Dim Mang_Toa_Do0ngoai(3) As Point2d 'mong 0 trong
